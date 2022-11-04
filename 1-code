@@ -1,0 +1,11 @@
+a="aabbcde"  #input
+            #output :2a2b1c1d1e
+
+from collections import OrderedDict
+dict=OrderedDict.fromkeys(a,0)
+for i in a:
+    dict[i]+=1
+o=''
+for k,v in dict.items():
+    o+=str(v)+k
+print(o)
