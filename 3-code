@@ -1,0 +1,58 @@
+[10:21 am, 17/01/2023] عمران...Immu: Simulate Librarian Work:
+
+A librarian is managing multiple books kept on shelf but he can access one book at a time from the top of the stack of books. He cannot pull any book directly from the stack. To access the required book, he has to pop out all the books placed above it. Once the required book is accessed, he pushes other books on the stack again in same sequence.
+
+He has maximum 100 books to manage in the library. Every book has been assigned a unique number (a non-zero positive integer id, however multiple copies of the same book will have same number assigned to it. Find out how many books he has to pop out to give you the required book
+
+User can ask for multiple books at a time. 
+
+For example:
+
+Let us say, 5 books are available in library as follows: 34 23 56 57 78
+
+If a user ask for book 57, librarian pops out 4 books to access book 57
+
+Librarian issues book 57 to user. Librarian pushes other books again on the stack, so now the stack
+
+34 23 55 78
+
+If a user ask for book 78, librarian pops out 4 books to access book 78
+
+Librarian issues book 78 to user.
+
+Librarian pushes other books again on the stack, so now the stack become 34 23 55
+
+Input:
+
+book_stack List of integers representing list of books in the library (-1 as end of input) 
+
+Example book_stack=[34, 67, 8, 98, 34, 2, 34, 65, 76, -1 user_request List of integers representing books that user wants (-7 as end of input)
+
+Example user request = [8, 25, 34, 98, -1]
+
+Output:
+
+output (list data type) is an list of integers. Each element of this list should
+
+represent number of books need to pop out to access the corresponding
+
+book from the book_stack. If book is not available then update element of the output list as -1 E.g. result of the above example would be updated output list as follows Output = [3, -1, 1, 2]
+
+
+
+
+
+------solution
+
+a=[34,67,8,98,34,2,34,65,76]  #[int(i) for i in input()]
+b=[8,25,34,98] #[int(i) for i in input()]  #we need to remove last ele in the both list's which is '-1' use ==> b[:len(b)] 
+c=[]
+for i in b:
+    if i in a:
+        c.append(a.index(i)+1)
+        a.remove(i)
+    else:
+        c.append("-1")
+print(*c)
+
+        
