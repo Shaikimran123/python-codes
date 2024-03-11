@@ -1,0 +1,38 @@
+public class Main
+{
+	public static void main(String[] args) {
+	
+	    int m=5;
+		
+		for(int i=1;i<m;i++)
+		{
+		    System.out.println("*".repeat(i));
+		}
+		for(int i=m;i>0;i--)
+		{
+		     System.out.println("*".repeat(i)); 
+		}
+	
+	    
+	}
+}
+
+/*
+for i in range(1,5):
+    print('*' * i)
+for i in range(5,0,-1):
+    print('*'*i) 
+    
+    *
+    **
+    ***
+    ****
+    *****
+    ****
+    ***
+    **
+    *
+    *
+    
+    */
+    
