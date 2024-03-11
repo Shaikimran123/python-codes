@@ -36,3 +36,107 @@ for i in range(5,0,-1):
     
     */
     
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+	    int n=4;
+	    
+	    /*
+	    
+	    *      *
+	    **    **
+	    ***  ***
+	    ********
+	    ********
+	    ***  ***
+	    **    **
+	    *      *
+	    
+	    1st     2nd      3rd
+	    ------------------------
+	    1star  6spaces   1star
+	    2star  4spaces   2star
+	    3star  2spaces   3star
+	    4star  0spaces   4star
+	    
+	i=1        2*3=6spaces  (n-i)*2  -->(4-1)*2=6spaces
+	i=2        2*2=4                    (4-2)*2=4spaces
+	i=3        2*1=2                    (4-3)*2=2spaces
+	i=4        2*0=0
+	
+	
+	for i=1 to n
+	    
+	    1st part 
+	    for j=1 to i 
+	     
+	    spaces=2*(n-i);
+	    for i=1 to space 
+	    
+	    3rd part
+	    for j=1 to i;
+	    
+	    
+	
+	*/
+	
+	
+	    for(int i=1;i<=n;i++)
+	    {
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print("*");
+	        }
+	        
+	        int space=2*(n-i);
+	        for(int j=1;j<=space;j++)
+	        {
+	            System.out.print(" ");
+	        }
+	        
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print("*");
+	        }
+	        System.out.println();
+	    }
+	    
+	    
+	    for(int i=n;i>=0;i--)
+	    {
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print("*");
+	        }
+	        
+	        int space=2*(n-i);
+	        for(int j=1;j<=space;j++)
+	        {
+	            System.out.print(" ");
+	        }
+	        
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print("*");
+	        }
+	        System.out.println();
+	    }
+	      
+	
+	    
+	}
+}
+
+
+
+    
+    
+    --------------------------------------------------------------------
